@@ -14,7 +14,7 @@ dotenv.config({path:"./config/config.env"});
 app.use(
     cors({
     origin: [process.env.FRONTEND_URL],
-    methods: ["POST"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 })
 );
@@ -24,6 +24,7 @@ app.use(express.urlencoded({extended: true }));
 app.use('/api/v1/reservation',reservationRouter);
 app.use('/api/v1/auth',authRouter);
 app.use ('/api/v1/hotel',hotelRouter);
+
 
 dbConnection();
 

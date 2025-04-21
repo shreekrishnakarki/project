@@ -27,7 +27,20 @@ export const signup = async(req,res)=> {
 }
 
 
+export const getAllUsers = async (req, res) => {
+  try {
+    
+    const user = await User.findById(req.user);
+    if (!user || !user.isAdmin) {
+      return res.status(403).json({ message: "Access denied. Admins only." });
+    }
 
+    const users = await User.find({}, "-password"); 
+    res.status(200).json(users);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
 export const signin = async(req,res)=> {
   try {
     const { email, password } = req.body;

@@ -15,14 +15,13 @@ const reservationSchema = new mongoose.Schema({
     maxLength: [30, "Last name cannot exceed 30 Characters."],
   },
   indate: {
-    type: String,
+    type: Date, 
     required: true,
   },
   outdate: {
-    type: String,
+    type: Date, 
     required: true,
   },
-  
   email: {
     type: String,
     required: true,
@@ -34,6 +33,14 @@ const reservationSchema = new mongoose.Schema({
     minLength: [10, "Phone number must contain 10 Digits."],
     maxLength: [10, "Phone number must contain 10 Digits."],
   },
+  guests: {
+    type: Number,
+    required: true,
+    min: [1, "At least 1 guest is required"],
+    max: [10, "Maximum 10 guests are allowed"],
+  },
+
 });
+
 
 export const Reservation = mongoose.model("Reservation", reservationSchema);

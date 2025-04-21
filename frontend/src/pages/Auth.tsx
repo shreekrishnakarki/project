@@ -56,7 +56,7 @@ function Auth() {
       <div className="max-w-md w-full">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
          
-          <div className="p-8 text-center bg-gradient-to-r from-indigo-500 to-blue-600">
+          <div className="p-8 text-center bg-gradient-to-r from-green-500 to-blue-400">
             <h1 className="text-3xl font-bold text-white mb-2">
               Welcome {isSignIn ? 'Back' : 'to StayFinder'}
             </h1>
@@ -84,7 +84,7 @@ function Auth() {
                         value={formData.firstName}
                         onChange={handleInputChange}
                         className="pl-10 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                        placeholder="Ram"
+                        placeholder="Enter your first name"
                         required
                       />
                     </div>
@@ -101,7 +101,7 @@ function Auth() {
                         value={formData.lastName}
                         onChange={handleInputChange}
                         className="pl-10 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                        placeholder="Karki"
+                        placeholder="Enter your last name"
                         required
                       />
                     </div>
@@ -118,7 +118,7 @@ function Auth() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="pl-10 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                        placeholder="98XXXXXXXX"
+                        placeholder="Enter your phone number"
                         required
                       />
                     </div>
@@ -138,7 +138,7 @@ function Auth() {
                     value={formData.email}
                     onChange={handleInputChange}
                     className="pl-10 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                    placeholder="xyz@example.com"
+                    placeholder="Enter your email here"
                     required
                   />
                 </div>
